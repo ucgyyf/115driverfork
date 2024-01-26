@@ -63,7 +63,7 @@ type MkdirResp struct {
 	BasicResp
 	AreaID IntString `json:"aid"`
 
-	CategoryID   IntString `json:"cid"`
+	CategoryID   int64     `json:"cid"`
 	CategoryName string    `json:"cname"`
 
 	FileID   string `json:"file_id"`
@@ -74,7 +74,7 @@ type FileListResp struct {
 	BasicResp
 
 	AreaID     string    `json:"aid"`
-	CategoryID IntString `json:"cid"`
+	CategoryID int64     `json:"cid"`
 
 	Count int    `json:"count"`
 	Order string `json:"order"`
@@ -373,7 +373,7 @@ type ShareSnapResp struct {
 type ShareFile struct {
 	FileID     string       `json:"fid"`
 	UID        int          `json:"uid"`
-	CategoryID IntString    `json:"cid"`
+	CategoryID int64        `json:"cid"`
 	FileName   string       `json:"n"`
 	Type       string       `json:"ico"`
 	Sha1       string       `json:"sha"`
