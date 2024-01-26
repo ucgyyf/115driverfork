@@ -89,7 +89,7 @@ type FileListResp struct {
 
 type FileInfo struct {
 	AreaID     IntString `json:"aid"`
-	CategoryID IntString `json:"cid"`
+	CategoryID int64     `json:"cid"`
 	FileID     string    `json:"fid"`
 	ParentID   string    `json:"pid"`
 
